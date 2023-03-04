@@ -1,5 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
+# Authbor: Deep BitCoin Team.
+# Date: 2023-03-01
+# Version: 1.0
+# Where: Tokyo, Japan
+
 import socket
 import sys
 
@@ -29,12 +34,12 @@ class CLIENT():
                     received_size = 0
 
                     while received_size < file_size:
-                        size = 0  # 准确接收数据大小，解决粘包
-                        if file_size - received_size > 1024:  # 多次接收
+                        size = 0  
+                        if file_size - received_size > 1024:  
                             size = 1024
-                        else:  # 最后一次接收完毕
+                        else:  
                             size = file_size - received_size
-                        data = self.c.recv(size)  # 多次接收内容，接收大数据
+                        data = self.c.recv(size)  
                         data_len = len(data)
                         received_size += data_len
                         print('received：', int(received_size / file_size * 100), "%")
