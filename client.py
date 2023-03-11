@@ -55,7 +55,7 @@ class CLIENT():
 
 def main():
 
-    s = CLIENT("43.163.226.97",9999,savefile="./data.bin")
+    s = CLIENT("154.221.28.77",9999,savefile="./data.bin")
     s.run()
 
 if __name__ == "__main__":
